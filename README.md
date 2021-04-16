@@ -1,5 +1,3 @@
-[![Build Status][badge-travis-image]][badge-travis-url]
-
 Kong plugin template WITH DOCKER / DOCKER COMPOSE
 ====================
 
