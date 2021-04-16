@@ -1,0 +1,11 @@
+_format_version: "2.1"
+
+services:
+  - name: my-service
+    url: http://mockbin.org/bin/eab73e0e-f603-41ab-b9a3-91cab0422917
+    plugins:
+      - name: kong-plugin-myplugin
+    routes:
+      - name: get-data
+        methods: [GET, POST]
+        paths: [/v1/my-plugin-data]

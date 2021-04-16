@@ -1,0 +1,32 @@
+version: "3.3"
+
+volumes:
+  kong_data: {}
+
+services:
+  kong:
+    build:
+      context: ./
+    volumes:
+      - ./kong-declarative-config.yml:/tmp/kong-declarative-config.yml
+      - ./kong/plugins/myplugin:/usr/local/lib/luarocks/rocks-5.1/kong-plugin-myplugin/1.0.0-1/lua/kong/plugins/kong-plugin-myplugin
+      - ./kong/plugins/myplugin:/usr/local/share/lua/5.1/kong/plugins/kong-plugin-myplugin
+    environment:
+      KONG_DATABASE: "off"
+      KONG_DECLARATIVE_CONFIG: /tmp/kong-declarative-config.yml
+      KONG_PROXY_ACCESS_LOG: /dev/stdout
+      KONG_ADMIN_ACCESS_LOG: /dev/stdout
+      KONG_PROXY_ERROR_LOG: /dev/stderr
+      KONG_ADMIN_ERROR_LOG: /dev/stderr
+      KONG_ADMIN_LISTEN: 0.0.0.0:8001
+      KONG_LOG_LEVEL: debug
+      KONG_PLUGINS: bundled,kong-plugin-myplugin
+    ports:
+      - 8000:8000
+      - 8001:8001
+      - 8444:8444
+  konga:
+    image: pantsel/konga:0.14.9
+    ports:
+      - 1337:1337
+    container_name: konga
