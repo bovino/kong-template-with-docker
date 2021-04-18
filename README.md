@@ -14,6 +14,12 @@ This project is a fork of the original kongo template with Docker setup includin
 To start the containers:
 `docker-compose up or docker-compose up -d`
 
+You need the following ports available:
+- 8000 (Kong the API Gateway)
+- 8001 (Kong Admin API)
+- 1337 (Konga GUI)
+- 8444
+
 To use Konga GUI go to (http://localhost:1337), configure an admin user, log in and creatre a connection pointed to http://kong:8001.
 
 Now you can make a request to a route and see the activated plugin in action.
