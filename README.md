@@ -6,7 +6,7 @@ up and running quickly for developing your own plugins.
 
 In fact, this "template" has two custom plugin samples both installed and activated, one in Lua and the other
 using JavaScript, running in the new kong-js-pdf (please check here https://www.npmjs.com/package/kong-pdk
-and also here https://github.com/Kong/kong-js-pdk). The template is also configured to use the new 2.4.0 release
+and also here https://github.com/Kong/kong-js-pdk). The template is also configured to use the new 2.4.x release
 of Kong (using 2.4.0-alpine docker image).
 
 This template was designed to work with the
