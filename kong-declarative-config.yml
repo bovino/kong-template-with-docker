@@ -5,6 +5,7 @@ services:
     url: http://mockbin.org/bin/eab73e0e-f603-41ab-b9a3-91cab0422917
     plugins:
       - name: kong-plugin-myplugin
+      - name: js-hello
     routes:
       - name: get-data
         methods: [GET, POST]
