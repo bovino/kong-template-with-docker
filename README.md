@@ -40,4 +40,5 @@ To stop the containers:
 - Add a fourth plugin to the mix, written in Go
 - Add unit-testing, integration-testing and code coverage verification for the JavaScript plugin
 - Run some load tests to compare Lua x JS plugins performance in some scenarios
-
+- Some dockerized setup to make it possible to run Pongo tests without having to install Pongo tooling manually. Installing Pongo is very easy (specially on Linux) but.... you know.... just to make it easier even if you are on Windows without WSL2 support enabled.
+- Add more complex plugins samples that does something really useful for mankind, like printing ASCII talking-cows to your consoles and logs like cowsay ( https://github.com/piuccio/cowsay )
