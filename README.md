@@ -1,4 +1,4 @@
-Kong plugin template WITH DOCKER / DOCKER COMPOSE
+Kong plugin template WITH DOCKER / DOCKER COMPOSE (and JavaScript plugin running with kong-js-pdk)
 ====================
 
 This repository contains a simple Kong plugin template to get you
@@ -34,3 +34,10 @@ To confirm the plugin is activated and working, look the response headers or che
 
 To stop the containers:
 `docker-compose down`
+
+### TODO LIST
+- Add a third plugin to the mix, written in TypeScript
+- Add a fourth plugin to the mix, written in Go
+- Add unit-testing, integration-testing and code coverage verification for the JavaScript plugin
+- Run some load tests to compare Lua x JS plugins performance in some scenarios
+
