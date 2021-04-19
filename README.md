@@ -1,15 +1,20 @@
 Kong plugin template WITH DOCKER / DOCKER COMPOSE
 ====================
 
-This repository contains a very simple Kong plugin template to get you
+This repository contains a simple Kong plugin template to get you
 up and running quickly for developing your own plugins.
+
+In fact, this "template" has two custom plugin samples both installed and activated, one in Lua and the other
+using JavaScript, running in the new kong-js-pdf (please check here https://www.npmjs.com/package/kong-pdk
+and also here https://github.com/Kong/kong-js-pdk). The template is also configured to use the new 2.4.0 release
+of Kong (using 2.4.0-alpine docker image).
 
 This template was designed to work with the
 [`kong-pongo`](https://github.com/Kong/kong-pongo).
 
 Please check out this repo `README` files for usage instructions.
 
-This project is a fork of the original kongo template with Docker setup including Kong itself (with the plugin already activated in one service) and Konga GUI
+This project is a fork of the original kongo template project with the addition of Docker setup for Kong itself (with two custom plugins already activated in one service), kong-js-pdk (needed to run the JavaScript plugin sample) and Konga GUI
 
 To start the containers:
 `docker-compose up or docker-compose up -d`

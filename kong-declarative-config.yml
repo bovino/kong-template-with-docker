@@ -6,6 +6,8 @@ services:
     plugins:
       - name: kong-plugin-myplugin
       - name: js-hello
+        config:
+          message: Bovino is here!!!
     routes:
       - name: get-data
         methods: [GET, POST]
