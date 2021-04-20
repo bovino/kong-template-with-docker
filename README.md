@@ -9,7 +9,12 @@ using JavaScript, running in the new kong-js-pdf (please check here https://www.
 and also here https://github.com/Kong/kong-js-pdk). The template is also configured to use the new 2.4.x release
 of Kong (using 2.4.0-alpine docker image).
 
-This template was designed to work with the
+There are two JS plugins here:
+
+- js-hello: This is an example plugin that add some headers to the response
+- js-body-validation: This is an example plugin that prints body content and perform some validation on it
+
+The Lua plugin contained in this template was designed to work with the
 [`kong-pongo`](https://github.com/Kong/kong-pongo).
 
 Please check out this repo `README` files for usage instructions.
@@ -36,8 +41,8 @@ To stop the containers:
 `docker-compose down`
 
 ### TODO LIST
-- Add a third plugin to the mix, written in TypeScript
-- Add a fourth plugin to the mix, written in Go
+- Add a fourth plugin to the mix, written in TypeScript
+- Add a fifth plugin to the mix, written in Go
 - Add unit-testing, integration-testing and code coverage verification for the JavaScript plugin
 - Run some load tests to compare Lua x JS plugins performance in some scenarios
 - Some dockerized setup to make it possible to run Pongo tests without having to install Pongo tooling manually. Installing Pongo is very easy (specially on Linux) but.... you know.... just to make it easier even if you are on Windows without WSL2 support enabled.
