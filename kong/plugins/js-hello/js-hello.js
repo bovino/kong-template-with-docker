@@ -25,6 +25,10 @@ class KongPlugin {
 
     kong.log.info(' Path called ::: ' + await kong.request.getPath());
     kong.log.info(' HTTP method called ::: ' + await kong.request.getMethod());
+    kong.log.inspect(await kong.request.getBody("application/json"));
+    let body = await kong.request.getBody("application/json");
+    kong.log.info(' Body "content.text" ::: ' + body[0].content.text);
+    kong.log.info('END of access phase!');
   }
 }
 
