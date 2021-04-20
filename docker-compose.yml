@@ -25,13 +25,9 @@ services:
       KONG_ADMIN_ERROR_LOG: /dev/stderr
       KONG_ADMIN_LISTEN: 0.0.0.0:8001
       KONG_LOG_LEVEL: debug
-      KONG_PLUGINS: bundled,kong-plugin-myplugin,js-hello
+      KONG_PLUGINS: bundled,kong-plugin-myplugin,js-hello,js-body-validation
     ports:
       - 8000:8000
       - 8001:8001
       - 8444:8444
-  konga:
-    image: pantsel/konga:0.14.9
-    ports:
-      - 1337:1337
-    container_name: konga
+      - 8443:8443
