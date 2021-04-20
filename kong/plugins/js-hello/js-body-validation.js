@@ -11,8 +11,8 @@ class KongPlugin {
 
   async access(kong) {
 
-    kong.log.inspect(await kong.request.getBody("application/json"));
     let body = await kong.request.getBody("application/json");
+    kong.log.inspect(body);
 
     try {
       if(body[0].content === undefined || body[0].content.text === undefined || body[0].content.text === ""){

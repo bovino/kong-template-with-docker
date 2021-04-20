@@ -9,6 +9,16 @@ services:
         config:
           message: Bovino is here!!!
     routes:
-      - name: get-data
+      - name: get-post-data
         methods: [GET, POST]
         paths: [/v1/my-plugin-data]
+      - name: only-post-https-data
+        methods: [POST]
+        protocols: [https]
+        paths: [/v2/my-plugin-data]
+      - name: post-data-http
+        methods: [POST]
+        protocols: [http]
+        paths: [/v3/my-plugin-data]
+        plugins:
+          - name: js-body-validation
