@@ -22,6 +22,9 @@ class KongPlugin {
       kong.response.setHeader("x-hello-from-javascript", "Javascript says " + message + " to " + host),
       kong.response.setHeader("x-javascript-pid", proc.pid),
     ])
+
+    kong.log.info(' Path called ::: ' + await kong.request.getPath());
+    kong.log.info(' HTTP method called ::: ' + await kong.request.getMethod());
   }
 }
 
