@@ -1,6 +1,17 @@
 Kong plugin template WITH DOCKER / DOCKER COMPOSE (and JavaScript plugin running with kong-js-pdk)
 ====================
 
+## TLDR instructions
+
+- Install Docker Engine (a version with Docker Compose support)
+- Clone this repo
+- At the root folder run ` docker-compose up -d `
+- Smile and fire request to the routes and see custom plugins in action ( GET http://localhost:8000/v1/my-plugin-data or POST http://localhost:8000/v3/my-plugin-data)
+- Open the of one the plugins, change anything
+- Run ` docker-compose restart ` (or down and up) and make the requests again to see your changes applied
+
+## Now, the README....
+
 This repository contains a simple Kong plugin template to get you
 up and running quickly for developing your own plugins.
 
