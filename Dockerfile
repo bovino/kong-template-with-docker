@@ -22,12 +22,12 @@ RUN set -ex \
   && setcap 'cap_net_bind_service=+ep' /usr/local/bin/kong \
   && setcap 'cap_net_bind_service=+ep' /usr/local/openresty/nginx/sbin/nginx
 ENV NPM_CONFIG_LOGLEVEL info
-RUN apk add --update python
+RUN apk add --no-cache python3 py3-pip
 RUN apk add --update nodejs npm
 RUN echo "NODE Version:" && node --version
 RUN echo "NPM Version:" && npm --version
 RUN npm -g config set user root
-RUN apk add g++ make python
+RUN apk add g++ make python3
 RUN npm install typescript -g
 RUN npm install kong-pdk -g
 USER kong
