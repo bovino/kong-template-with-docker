@@ -2,7 +2,7 @@ _format_version: "2.1"
 
 services:
   - name: my-service
-    url: http://mockbin.org/bin/eab73e0e-f603-41ab-b9a3-91cab0422917
+    url: http://httpbin.org/anything
     plugins:
       - name: kong-plugin-myplugin
       - name: js-hello
@@ -12,6 +12,18 @@ services:
       - name: get-post-data
         methods: [GET, POST]
         paths: [/v1/my-plugin-data]
+        plugins:
+          #- name: key-auth
+          #  config:
+          #   key_names:
+          #     - apikey
+          - name: rate-limiting
+            config:
+              second: 3
+              hour: 5
+        #      limit_by: consumer, credential, ip, service, header, path
+              policy: local
+        #      policy: local, cluster, redis
       - name: only-post-https-data
         methods: [POST]
         protocols: [https]
@@ -22,3 +34,10 @@ services:
         paths: [/v3/my-plugin-data]
         plugins:
           - name: js-body-validation
+          - name: request-size-limiting
+            config:
+              allowed_payload_size: 8
+              size_unit: bytes
+              #size_unit: kilobytes
+              # size_unit: megabytes
+              require_content_length: false
