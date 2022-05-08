@@ -9,6 +9,13 @@ Kong plugin template WITH DOCKER / DOCKER COMPOSE (and JavaScript plugin running
 - Smile and fire request to the routes and see custom plugins in action ( GET http://localhost:8000/v1/my-plugin-data or POST http://localhost:8000/v3/my-plugin-data)
 - Open the of one the plugins, change anything
 - Run ` docker-compose restart ` (or down and up) and make the requests again to see your changes applied
+- you can also import a postman collection with a few request samples to the routes exposed in this kong installation, just go to the folder "postman" to get the json file. Import it in your postman in "File -> Import" menu.
+
+[![postman_collection](postman/import.jpg)
+
+After importing the collection you should see something like this:
+
+[![postman_collection_imported](postman/import2.jpg)
 
 ## Now, the README....
 
