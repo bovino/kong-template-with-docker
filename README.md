@@ -1,4 +1,4 @@
-Kong plugin template WITH DOCKER / DOCKER COMPOSE (and JavaScript plugin running with kong-js-pdk)
+Kong plugin template WITH DOCKER / DOCKER COMPOSE (and JavaScript plugin running with kong-js-pdk) running on a DBLESS Kong 2.5.0 installation
 ====================
 
 ## TLDR instructions
@@ -11,11 +11,11 @@ Kong plugin template WITH DOCKER / DOCKER COMPOSE (and JavaScript plugin running
 - Run ` docker-compose restart ` (or down and up) and make the requests again to see your changes applied
 - you can also import a postman collection with a few request samples to the routes exposed in this kong installation, just go to the folder "postman" to get the json file. Import it in your postman in "File -> Import" menu.
 
-[![postman_collection](postman/import.jpg)
+![postman_collection](postman/import.jpg)
 
 After importing the collection you should see something like this:
 
-[![postman_collection_imported](postman/import2.jpg)
+![postman_collection_imported](postman/import2.jpg)
 
 ## Now, the README....
 
@@ -40,15 +40,12 @@ Please check out this repo `README` files for usage instructions.
 This project is a fork of the original kongo template project with the addition of Docker setup for Kong itself (with two custom plugins already activated in one service nad a third one activated only in a route), kong-js-pdk (needed to run the JavaScript plugin samples) and Konga GUI
 
 To start the containers:
-`docker-compose up or docker-compose up -d`
+`docker-compose up or docker-compose up --build or or docker-compose up -d`
 
 You need the following ports available:
 - 8000 (Kong the API Gateway)
 - 8001 (Kong Admin API)
-- 1337 (Konga GUI)
 - 8444
-
-To use Konga GUI go to (http://localhost:1337), configure an admin user, log in and creatre a connection pointed to http://kong:8001.
 
 Now you can make a request to a route and see one of the the activated plugin in action.
 To perform this, just make a GET request to (http://localhost:8000/v1/my-plugin-data).
