@@ -1,4 +1,4 @@
-FROM kong:2.5.1-alpine
+FROM kong:2.5.0-alpine
 USER root
 ENV PACKAGES="openssl-devel kernel-headers gcc git openssh" \
   LUA_BASE_DIR="/usr/local/share/lua/5.1" \
@@ -22,12 +22,8 @@ RUN set -ex \
   && setcap 'cap_net_bind_service=+ep' /usr/local/bin/kong \
   && setcap 'cap_net_bind_service=+ep' /usr/local/openresty/nginx/sbin/nginx
 ENV NPM_CONFIG_LOGLEVEL info
-RUN  apk --no-cache add python3
-RUN apk add --update nodejs npm
-RUN echo "NODE Version:" && node --version
-RUN echo "NPM Version:" && npm --version
-RUN npm -g config set user root
-RUN apk add g++ make python3
-RUN npm install typescript -g
-RUN npm install kong-pdk -g
-USER kong
+RUN apk add --update nodejs npm python3 make g++
+RUN npm install --unsafe -g kong-pdk@0.5.3
+
+ENV term xterm
+RUN apk add --update vim nano
