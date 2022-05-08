@@ -32,12 +32,10 @@ There are two JS plugins here:
 - js-hello: This is an example plugin that add some headers to the response
 - js-body-validation: This is an example plugin that prints body content and perform some validation on it
 
-The Lua plugin contained in this template was designed to work with the
+There is also a Lua plugin contained in this template that was designed to work with
 [`kong-pongo`](https://github.com/Kong/kong-pongo).
 
-Please check out this repo `README` files for usage instructions.
-
-This project is a fork of the original kongo template project (https://github.com/Kong/kong-plugin) with the addition of Docker setup for Kong itself (with two custom JS plugins already activated in one service and a third one activated only in a route) and kong-js-pdk (needed to run the JavaScript plugin samples).
+This project is a fork of the original kong plugin template project (https://github.com/Kong/kong-plugin) with the addition of Docker setup for Kong itself (with two custom JS plugins already activated in one service and a third one activated only in a route) and kong-js-pdk (needed to run the JavaScript plugin samples).
 
 To start the containers:
 `docker-compose up` or `docker-compose up --build` or `docker-compose up -d`
