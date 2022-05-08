@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "97b55cad-d055-46b4-bf28-6992ced4701d",
+		"name": "Kong Template With Docker - Request samples",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Request V1 (Rate Limit + service plugins)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/v1/my-plugin-data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"my-plugin-data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Request V1 (Rate Limit + service plugins)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/v1/my-plugin-data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"my-plugin-data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Request V2 (HTTPS only)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:8000/v2/my-plugin-data",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v2",
+						"my-plugin-data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Request v3 (Plugins JS Body Validation + Request Size Limit)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/v3/my-plugin-data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v3",
+						"my-plugin-data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Basic Kong Node informations from Admin API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kong Admin API endpoints list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/endpoints",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"endpoints"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
