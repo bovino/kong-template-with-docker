@@ -37,10 +37,10 @@ The Lua plugin contained in this template was designed to work with the
 
 Please check out this repo `README` files for usage instructions.
 
-This project is a fork of the original kongo template project with the addition of Docker setup for Kong itself (with two custom plugins already activated in one service nad a third one activated only in a route), kong-js-pdk (needed to run the JavaScript plugin samples) and Konga GUI
+This project is a fork of the original kongo template project (https://github.com/Kong/kong-plugin) with the addition of Docker setup for Kong itself (with two custom JS plugins already activated in one service and a third one activated only in a route) and kong-js-pdk (needed to run the JavaScript plugin samples).
 
 To start the containers:
-`docker-compose up or docker-compose up --build or or docker-compose up -d`
+`docker-compose up` or `docker-compose up --build` or `docker-compose up -d`
 
 You need the following ports available:
 - 8000 (Kong the API Gateway)
