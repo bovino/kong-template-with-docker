@@ -1,7 +1,7 @@
 Kong plugin template WITH DOCKER / DOCKER COMPOSE (and JavaScript plugin running with kong-js-pdk) running on a DBLESS Kong 2.5.0 installation
 ====================
 
-## TLDR instructions
+## TLDR fast instructions
 
 - Install Docker Engine (a version with Docker Compose support)
 - Clone this repo
