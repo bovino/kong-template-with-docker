@@ -1,4 +1,4 @@
-FROM kong:2.8.1-alpine
+FROM kong:2.5.0-alpine
 USER root
 ENV PACKAGES="openssl-devel kernel-headers gcc git openssh" \
   LUA_BASE_DIR="/usr/local/share/lua/5.1" \
@@ -22,7 +22,7 @@ RUN set -ex \
   && setcap 'cap_net_bind_service=+ep' /usr/local/bin/kong \
   && setcap 'cap_net_bind_service=+ep' /usr/local/openresty/nginx/sbin/nginx
 ENV NPM_CONFIG_LOGLEVEL info
-RUN apk add --no-cache python3 py3-pip
+RUN  apk --no-cache add python3
 RUN apk add --update nodejs npm
 RUN echo "NODE Version:" && node --version
 RUN echo "NPM Version:" && npm --version

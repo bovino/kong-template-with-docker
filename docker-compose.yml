@@ -1,4 +1,4 @@
-version: "3.3"
+version: "3.8"
 
 volumes:
   kong_data: {}
@@ -14,7 +14,7 @@ services:
       - ./kong/plugins/js-hello:/usr/local/kong/plugins/js-plugins
     environment:
       KONG_DATABASE: "off"
-      KONG_PLUGINSERVER_NAMES: js
+      KONG_PLUGINSERVER_NAMES: "js"
       KONG_PLUGINSERVER_JS_SOCKET: /usr/local/kong/js_pluginserver.sock
       KONG_PLUGINSERVER_JS_START_CMD: /usr/lib/node_modules/kong-pdk/bin/kong-js-pluginserver -d /usr/local/kong/plugins/js-plugins
       KONG_PLUGINSERVER_JS_QUERY_CMD: /usr/lib/node_modules/kong-pdk/bin/kong-js-pluginserver -d /usr/local/kong/plugins/js-plugins --dump-all-plugins
