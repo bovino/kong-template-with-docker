@@ -16,8 +16,8 @@ services:
       KONG_DATABASE: "off"
       KONG_PLUGINSERVER_NAMES: "js"
       KONG_PLUGINSERVER_JS_SOCKET: /usr/local/kong/js_pluginserver.sock
-      KONG_PLUGINSERVER_JS_START_CMD: /usr/lib/node_modules/kong-pdk/bin/kong-js-pluginserver -d /usr/local/kong/plugins/js-plugins
-      KONG_PLUGINSERVER_JS_QUERY_CMD: /usr/lib/node_modules/kong-pdk/bin/kong-js-pluginserver -d /usr/local/kong/plugins/js-plugins --dump-all-plugins
+      KONG_PLUGINSERVER_JS_START_CMD: /usr/local/bin/kong-js-pluginserver -d /usr/local/kong/plugins/js-plugins
+      KONG_PLUGINSERVER_JS_QUERY_CMD: /usr/local/bin/kong-js-pluginserver -d /usr/local/kong/plugins/js-plugins --dump-all-plugins
       KONG_DECLARATIVE_CONFIG: /tmp/kong-declarative-config.yml
       KONG_PROXY_ACCESS_LOG: /dev/stdout
       KONG_ADMIN_ACCESS_LOG: /dev/stdout

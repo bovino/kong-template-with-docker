@@ -1,9 +1,9 @@
-FROM kong:2.5.0-alpine
+FROM kong:2.8.1-alpine
 USER root
 ENV PACKAGES="openssl-devel kernel-headers gcc git openssh" \
   LUA_BASE_DIR="/usr/local/share/lua/5.1" \
   KONG_PLUGIN_SESSION_VER="2.4.4" \
-  NGX_DISTRIBUTED_SHM_VER="1.0.2"
+  NGX_DISTRIBUTED_SHM_VER="1.0.7"
 RUN set -ex \
   && apk --no-cache add \
   libssl1.1 \

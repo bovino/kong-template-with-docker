@@ -1,4 +1,4 @@
-Kong plugin template WITH DOCKER / DOCKER COMPOSE (and JavaScript plugin running with kong-js-pdk) running on a DBLESS Kong 2.5.0 installation
+Kong plugin template WITH DOCKER / DOCKER COMPOSE (and JavaScript plugin running with kong-js-pdk) running on a DBLESS Kong 2.8.1 installation
 ====================
 
 ## TLDR fast instructions
@@ -24,8 +24,8 @@ up and running quickly for developing your own plugins.
 
 In fact, this "template" has two custom plugin samples both installed and activated, one in Lua and the other
 using JavaScript, running in the new kong-js-pdf (please check here https://www.npmjs.com/package/kong-pdk
-and also here https://github.com/Kong/kong-js-pdk). The template is also configured to use the new 2.5.0 release
-of Kong (using 2.5.0-alpine docker image). I tried with 2.5.1 or newer but i found a problem and opened an issue about it (https://github.com/Kong/docker-kong-js-pdk/issues/9)
+and also here https://github.com/Kong/kong-js-pdk). The template is also configured to use the new 2.8.1 release
+of Kong (using 2.8.1-alpine docker image).
 
 There are two JS plugins here:
 
