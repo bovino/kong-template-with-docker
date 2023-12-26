@@ -1,4 +1,4 @@
-FROM kong:2.8.1-alpine
+FROM kong:3.3.1-alpine
 USER root
 ENV PACKAGES="openssl-devel kernel-headers gcc git openssh" \
   LUA_BASE_DIR="/usr/local/share/lua/5.1" \
